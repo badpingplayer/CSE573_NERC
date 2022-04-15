@@ -36,7 +36,7 @@ export default function FormPropsTextFields() {
         BERTCRF: 'http://localhost:1103/pred/',
         BiLSTMCRF: 'http://localhost:1103/pred_bilstm_crf/',
         BERT: 'http://localhost:1103/pred_bert/',
-        CRF: 'http://localhost:1103/pred_crf/',
+        CRF: 'http://localhost:1103/pred_crf',
         BiLSTM: 'http://localhost:1103/pred_bilstm/'
     }
 
