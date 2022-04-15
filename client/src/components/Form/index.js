@@ -33,11 +33,13 @@ export default function FormPropsTextFields() {
     const apiErrorMessage = "Something went wrong.Please try again."
 
     const endpointDictionary = {
-        BERTCRF: 'http://localhost:1103/pred/',
-        BiLSTMCRF: 'http://localhost:1103/pred_bilstm_crf/',
-        BERT: 'http://localhost:1103/pred_bert/',
+        BERTCRF: 'http://localhost:1103/pred',
+        BiLSTMCRF: 'http://localhost:1103/pred_bilstm_crf',
+        BERT: 'http://localhost:1103/pred_bert',
         CRF: 'http://localhost:1103/pred_crf',
-        BiLSTM: 'http://localhost:1103/pred_bilstm/'
+        BiLSTM: 'http://localhost:1103/pred_bilstm',
+        Spacy: 'http://localhost:1103/pred_spacy'
+
     }
 
     const parse = (data) => {
@@ -131,6 +133,7 @@ export default function FormPropsTextFields() {
                             <MenuItem value="BiLSTMCRF">BiLSTM+CRF</MenuItem>
                             <MenuItem value="BERTCRF">BERT+CRF</MenuItem>
                             <MenuItem value="BiLSTM">BiLSTM</MenuItem>
+                            <MenuItem value="Spacy">Spacy</MenuItem>
                             <MenuItem value="All">All</MenuItem>
                         </Select>
                     </FormControl>
