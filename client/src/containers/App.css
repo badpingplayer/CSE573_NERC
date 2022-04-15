@@ -1,0 +1,12 @@
+.App {
+  float: left;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: #777;
+  display: inline-block;
+  width: 100%;
+}
