@@ -33,11 +33,11 @@ export default function FormPropsTextFields() {
     const apiErrorMessage = "Something went wrong.Please try again."
 
     const endpointDictionary = {
-        BERTCRF: 'http://6f07b0d263a9.ngrok.io/pred/',
-        BiLSTMCRF: 'http://b76e49bdf11b.ngrok.io/pred_bilstm_crf/',
-        BERT: 'http://6345c0b4776b.ngrok.io/pred_bert/',
-        CRF: 'http://c0437a5d5e88.ngrok.io/pred_crf/',
-        BiLSTM: 'http://ca6188acfe9f.ngrok.io/pred_bilstm/'
+        BERTCRF: 'http://localhost:1103/pred/',
+        BiLSTMCRF: 'http://localhost:1103/pred_bilstm_crf/',
+        BERT: 'http://localhost:1103/pred_bert/',
+        CRF: 'http://localhost:1103/pred_crf/',
+        BiLSTM: 'http://localhost:1103/pred_bilstm/'
     }
 
     const parse = (data) => {
