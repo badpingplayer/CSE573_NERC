@@ -114,17 +114,7 @@ export default function FormPropsTextFields() {
     return (
         <React.Fragment>
             <form className={classes.root} noValidate autoComplete="off">
-                <div className="textfield">
-                    <TextField
-                        id="outlined-helperText"
-                        label="Text to classify"
-                        defaultValue=""
-                        helperText=""
-                        variant="outlined"
-                        onChange={handleTextChange}
-                    />
-                </div>
-                <div className="selectgroup">
+            <div className="selectgroup">
                     <FormControl variant="filled" className={classes.formControl}>
                         <InputLabel id="demo-simple-select-filled-label">Model</InputLabel>
                         <Select
@@ -145,10 +135,20 @@ export default function FormPropsTextFields() {
                         </Select>
                     </FormControl>
                 </div>
+                <div className="textfield">
+                    <TextField
+                        id="outlined-helperText"
+                        label="Enter the text"
+                        defaultValue=""
+                        helperText=""
+                        variant="outlined"
+                        onChange={handleTextChange}
+                    />
+                </div>
             </form>
             <div className="button">
-                <Button variant="contained" color="primary" onClick={handleSubmit}>
-                    Submit
+                <Button variant="contained" color="secondary" onClick={handleSubmit}>
+                    ENTER
                 </Button>
             </div>
             {isLoader && <Loader />}

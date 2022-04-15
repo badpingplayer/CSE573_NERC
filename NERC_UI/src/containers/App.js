@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        NER classifier
+        NER CLASSIFIER
       </div>
       <div className="FormSection">
       <FormPropsTextFields/>
