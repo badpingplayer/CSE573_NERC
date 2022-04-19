@@ -8,6 +8,6 @@ import warnings
 warnings.filterwarnings('ignore')
 from project import MODELS_DIR
 
-model_file = open(MODELS_DIR + 'crf', 'rb')
+model_file = open(MODELS_DIR + '\crf', 'rb')
 model = pickle.load(model_file)
 model_file.close()
