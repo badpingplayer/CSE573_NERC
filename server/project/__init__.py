@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = "super secret key"
 CORS(app)
 PORT = 1103
-MODELS_DIR = "/Users/swamirishi/Documents/CSE573_NERC/server/models/"
+MODELS_DIR = r'C:\Users\7aayu\Downloads\CSE573_NERC\server\models'
 # app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/")
@@ -32,7 +32,7 @@ def crf_pred():
 
 @app.route('/pred_spacy', methods=['GET', 'POST',"OPTIONS"])
 def spacy_pred():
-    jsonData = {"data":"Default Sentence"}
+    jsonData = {"data":"Hi My Name is Swaminathan"}
     try:
         jsonData = request.get_json(force=True)
     except:
@@ -44,7 +44,7 @@ def spacy_pred():
 
 
 @app.route('/pred_bilstm_crf/', methods=['GET', 'POST'])
-def pred_app():
+def bilstm_pred():
     jsonData = request.get_json(force=True)
     print(jsonData)
     from project.nerc.bilstm_crf.model import pred_wrapper
