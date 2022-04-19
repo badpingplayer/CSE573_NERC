@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect
 from flask import Flask
 from flask_cors import CORS
-
-
+from project.nerc.spacy.model import show_ents
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -29,6 +28,27 @@ def crf_pred():
         pass
     print(jsonData)
     res = crf_predict(jsonData)
+    return res
+
+@app.route('/pred_spacy', methods=['GET', 'POST',"OPTIONS"])
+def spacy_pred():
+    jsonData = {"data":"Default Sentence"}
+    try:
+        jsonData = request.get_json(force=True)
+    except:
+        pass
+    print(jsonData)
+    res = show_ents(jsonData)
+    return res
+
+
+
+@app.route('/pred_bilstm_crf/', methods=['GET', 'POST'])
+def pred_app():
+    jsonData = request.get_json(force=True)
+    print(jsonData)
+    from project.nerc.bilstm_crf.model import pred_wrapper
+    res = pred_wrapper(jsonData)
     return res
 
 def load_models():
